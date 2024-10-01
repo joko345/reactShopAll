@@ -1,13 +1,9 @@
 
 import './App.css';
-import Headerindo from './components/headerFooter/header';
-import Content from './components/Content/contentWeb';
-import Footer from './components/headerFooter/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState, useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 function App() {
-  const [profile, setProfile] = useState("null");
 
   useEffect(() => { 
   }, []);
