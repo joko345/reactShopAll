@@ -10,7 +10,7 @@ root.render(
 
     <App />
 
-    /* library = nama props */
+    /* librasry = nama props */
   // </React.StrictMode>
 );
 
