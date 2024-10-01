@@ -6,12 +6,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-image: url("https://images.pexels.com/photos/5501143/pexels-photo-5501143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  /* background-image: url("https://images.pexels.com/photos/5501143/pexels-photo-5501143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
   background-size: cover; /* Mengatur gambar latar belakang memenuhi area */
   background-attachment: fixed; /* Gambar tetap saat scroll */
   padding: 20px;
 }
 
+.formBody{
+  text-align: center;
+}
+
+form{
+  padding: 10px;
+}
         
 header{
   text-align: center;
@@ -20,6 +27,13 @@ header{
 header li span{
   font-weight: bold;
 }
+
+.yellowText{
+  color: #ECB740;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 
   header img{
   width: 130px;
@@ -68,4 +82,71 @@ footer ul{
 
 footer ul a{
   font-size: 20px;
+}
+
+.my-shopping-list {
+  padding: 0;
+  margin: 0;
+}
+
+.my-shopping-list li {
+  background: #fef6e2;
+  display: flex; /* Menggunakan Flexbox */
+  align-items: center;
+  justify-content: space-between; /* Jarak antar elemen */
+  padding: 10px; /* Memberikan ruang antar item */
+  border-bottom: 1px solid #ddd; /* Garis pemisah antar item */
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.my-shopping-list li button {
+  margin-left: auto;
+  background-color: #ECB740; /* Warna tombol */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.my-shopping-list li button:hover {
+  background-color: #ff4a4a;
+  cursor: pointer;
+}
+
+.nav {
+  position: fixed;
+  background: #ccc;
+  padding: 20px 50px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+
+}
+
+.nav-Content {
+  display: flex;
+  width: 100%;
+  margin-left: 28px;
+  align-items: center; /* Menyelaraskan item vertikal */
+}
+
+.nav-Content button {
+  margin-left: auto; /* Mendorong tombol ke kanan */
+  background-color: #ECB740; /* Warna tombol */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.nav-Content button:hover {
+  background-color: #ff4a4a; /* Warna tombol saat hover */
+}
+
+.nav-Content div {
+  margin-right: 10px; /* Memberikan jarak antara teks dan tombol */
 }
