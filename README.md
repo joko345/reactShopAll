@@ -11,3 +11,6 @@ LINK CLOUDFLARE = https://fcdf85e9.landing-page-reactjs.pages.dev/
     saran async.await = react query tanstack. swr vercel app
     api github= https://api.github.com/users/joko345
     ss
+
+    react router untuk ganti page
+    react helmet untuk mengganti title page
