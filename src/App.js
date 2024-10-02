@@ -4,6 +4,7 @@ import Content from './components/Content/contentWeb';
 import Footer from './components/headerFooter/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from "react";
+import { BrowserRouter } from 'react-router-dom'
 
   function App() {
   useEffect(() => {}, []);
