@@ -1,53 +1,41 @@
 import './App.css';
-import Headerindo from './components/headerFooter/header';
-import Content from './components/Content/contentWeb';
-import Footer from './components/headerFooter/footer';
-import NotFound from './404'; 
-import Home from './components/Content/home';
-import Contact from './components/Content/contact';
-import AboutUs from './components/Content/aboutUs';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from "react";
-import { Routes, Route, Link, Outlet } from "react-router-dom";
 
 function App() {
   useEffect(() => {}, []);
 
+  const [isOnline, setIsOnline] = useState(navigator.onLine); // Changed IsOnline to isOnline for consistency
+
+  const statusInternet = () => {
+    console.log('navigator = ', navigator.onLine);
+    setIsOnline(navigator.onLine)
+  }
+
+  useEffect (() => {
+    window.addEventListener("Online", statusInternet);
+    window.addEventListener("Offlline", statusInternet);
+
+    return () => {
+      window.removeEventListener("Online", statusInternet);
+      window.removeEventListener("Offline", statusInternet);
+    }
+  },[isOnline])
+
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} /> {/* Ganti indexpath dengan index */}
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} /> 
-        {/* <Route path="*" element={<PageNotFound />} />  */}
-      </Route>
-    </Routes>
+    <div>
+      {isOnline ? ( // Conditional rendering based on online status
+        <div className="alert alert-success" role="alert">
+          You are online!
+        </div>
+      ) : (
+        <div className="alert alert-danger" role="alert">
+          Internet Offline
+        </div>
+      )}
+
+    </div>
   );
 }
-
-function Layout() {//layout konten
-  return (
-    <>
-      <header>
-        <Link to="/">Home</Link><br />
-        <Link to="/about-us">About Us</Link><br />
-        <Link to="/contact">Contact</Link><br />
-      </header>
-      <Outlet /> 
-{/* outlet memungkinan child dirender diluar fungsi utama dan menampilkan konten yang ditunjuk route*/}
-    </>
-  );
-}
-//fungsi untuk halaman route
-
-// function PageNotFound() {
-//   return (
-//     <section>
-//       <h1>Page not found</h1>
-//     </section>
-//   );
-// }
 
 export default App;
