@@ -1,5 +1,6 @@
 import { Helmet } from 'react-Helmet'
 
+
 export default function AboutUs() {
     return (
       <section>

@@ -16,6 +16,15 @@ body {
   background-attachment: fixed; /* Gambar tetap saat scroll */
   padding: 20px;
 }
+/* 
+.bg-login{
+  background-image: url("https://images.pexels.com/photos/5501143/pexels-photo-5501143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+} */
+
+.page404{
+  margin-top: 500px;
+  text-align: center;
+}
 
 .formBody{
   text-align: center;

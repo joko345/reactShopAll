@@ -1,6 +1,7 @@
 // components/404.js
 import React from 'react';
-import Helmet from 'react-Helmet'
+import Helmet from 'react-helmet';
+import './index.css';
 
 function NotFound() {
   return (
@@ -10,7 +11,7 @@ function NotFound() {
                 404 Page Not Found
             </title>
         </Helmet>
-      <h1>404 - Page Not Found</h1>
+      <p className='page404'>404 - Page Not Found</p>
     </section>
   );
 }
