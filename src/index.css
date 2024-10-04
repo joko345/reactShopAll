@@ -11,7 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  /* background-image: url("https://images.pexels.com/photos/5501143/pexels-photo-5501143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+  background-image: url("https://images.pexels.com/photos/5501143/pexels-photo-5501143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover; /* Mengatur gambar latar belakang memenuhi area */
   background-attachment: fixed; /* Gambar tetap saat scroll */
   padding: 20px;
@@ -21,8 +21,9 @@ body {
   background-image: url("https://images.pexels.com/photos/5501143/pexels-photo-5501143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 } */
 
+
 .page404{
-  margin-top: 500px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -47,17 +48,28 @@ header li span{
   margin-left: 8px;
   margin-right: 8px;
 }
-
-
-  header img{
-  width: 130px;
-    height: 130px;
+header img{
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     top: 200px;
   }
-
+.img1{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  float: left;
+  top: 0px;
+}
 h1{
   text-align: center;
+  
+}
+
+.homep{
+  text-align: center;
+  position: absolute;
+  left: 500px;
 }
 
 ul {
@@ -129,38 +141,37 @@ footer ul a{
   cursor: pointer;
 }
 
+.borderHome{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* optional */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.img1 {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
 .nav {
-  position: fixed;
-  background: #ccc;
-  padding: 20px 50px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   display: flex;
-
-}
-
-.nav-Content {
-  display: flex;
-  width: 100%;
-  margin-left: 28px;
-  align-items: center; /* Menyelaraskan item vertikal */
-}
-
-.nav-Content button {
-  margin-left: auto; /* Mendorong tombol ke kanan */
-  background-color: #ECB740; /* Warna tombol */
-  color: white;
-  border: none;
-  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
-  
 }
 
-.nav-Content button:hover {
-  background-color: #ff4a4a; /* Warna tombol saat hover */
-}
-
-.nav-Content div {
-  margin-right: 10px; /* Memberikan jarak antara teks dan tombol */
+.nav a {
+  margin-right: 20px;
 }

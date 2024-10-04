@@ -1,0 +1,39 @@
+legend{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+.imgOrc{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    float: right;
+    bottom: 35px;
+    margin-left: auto;
+}
+.border1 {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;  
+  }  
+.flex{
+    font-style: italic;
+    position: relative;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p {
+    text-wrap: balance;
+}
+
+fieldset {
+    border: 2px solid #000;  /* Mengatur garis kotak di sekitar fieldset */
+    padding: 10px;
+  }
+  
+legend {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
