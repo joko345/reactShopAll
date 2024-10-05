@@ -11,10 +11,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-image: url("https://images.pexels.com/photos/5501143/pexels-photo-5501143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  /* background-image: linear-gradient(150deg, red, yellow); */
+  /* background-image: url("https://images.pexels.com/photos/5501143/pexels-photo-5501143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
   background-size: cover; /* Mengatur gambar latar belakang memenuhi area */
   background-attachment: fixed; /* Gambar tetap saat scroll */
-  padding: 20px;
+  padding-top: 80px;
 }
 /* 
 .bg-login{
@@ -34,8 +35,17 @@ body {
 form{
   padding: 10px;
 }
-        
+  
+.pala{
+  background-color: black !important;
+}
+
 header{
+  position: fixed; /* Buat posisi header tetap */
+  top: 0; /* Pastikan berada di bagian paling atas */
+  width: 100%; /* Buat lebar penuh */
+  z-index: 1000; /* Atur z-index lebih tinggi agar di atas konten lain */
+  padding: 10px;
   text-align: center;
   }
 
@@ -166,6 +176,7 @@ footer ul a{
 }
 
 .nav {
+  color: #ddd;
   display: flex;
   justify-content: space-between;
   align-items: center;
