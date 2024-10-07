@@ -21,8 +21,9 @@ main{
 }
 
 .imgBook1{
-    background-color: white;
-    background: white;
+    width: 250px;
+    height: 350px;
+    margin: 0;
 }
 
 .paddingContent{
@@ -41,28 +42,36 @@ main{
   }  
   
 .flex{
-    font-style: italic;
+    font-style: bold;
     position: relative;
     word-break: break-all;
     text-align: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 8px;
-    
+    font-size: 30px;
+    margin-left: -10px;
+    margin-top: 2px;
+    inline-size: 280px;
+    /* inline adalah max baris, melebihi baris break word */
+    overflow-wrap: break-word;
 }
+
 p {
     text-wrap: balance;
 }
 
-fieldset {
-    border: 2px solid #000;  /* Mengatur garis kotak di sekitar fieldset */
-    padding: 10px;
-  }
+
   
 .textTest {
     /* border: 1px solid; */
     padding: 5px;
-    background-color: white;
+    inline-size: 260px;
+    font-family: 'arial';
+    font-display:unset;
     text-align: justify;
+    margin-left: -6px;
+    margin-top: -22px;
+    letter-spacing: -1px;
   }
   
   /* w3 */
@@ -190,7 +199,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-display-position{position:absolute}
 .w3-circle{border-radius:50%}
 .w3-round-small{border-radius:2px}.w3-round,.w3-round-medium{border-radius:4px}.w3-round-large{border-radius:8px}.w3-round-xlarge{border-radius:16px}.w3-round-xxlarge{border-radius:32px}
-.w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:0 8px}
+.w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:0 8px; margin-right: -80px;}
 .w3-container,.w3-panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
 .w3-code,.w3-codespan{font-family:Consolas,"courier new";font-size:16px}
 .w3-code{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}

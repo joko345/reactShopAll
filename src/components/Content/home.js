@@ -1,65 +1,63 @@
-import { Helmet } from 'react-Helmet'
-import img from '../bg/wood.webp'
-import cart1 from '../bg/cart1.png'
-import book11 from '../bg/book1.jpg'
+import { Helmet } from 'react-helmet';
+import { useEffect, useState } from "react";
 import './Content.css';
+import book1 from '../bg/book1.jpg'; 
+import book2 from '../bg/book2.jpg'; 
+import book3 from '../bg/book3.jpg'; 
 
 export default function Home() {
-    return (
-      <section>
+  const [books, setBooks] = useState([]); // Ubah menjadi array untuk menyimpan banyak buku
 
-        <Helmet>
-            <title>
-                home page
-            </title>
-        </Helmet>
- 
-        <div className='w3-row-padding w3-padding-16 w3-center' id="food">
-          <div className='w3-quarter'>
-          <img src={book11} alt='img1'/>
-          <h1 className='flex'>Elden Ring: Official Art Book Volume I</h1>
-           <p className='textTest'>Volume I features key art from the game’s opening movie, concept and development 
-            art of the large open-world and claustrophobic dungeons, and the game’s many characters and armors.
-              This translated English art book contains the same content found in the Japanese edition.</p>
-              </div>
-              <div className='w3-quarter'>
-          <img src={book11} alt='img1'/>
-          <h1 className='flex'>Elden Ring: Official Art Book Volume I</h1>
-           <p className='textTest'>Volume I features key art from the game’s opening movie, concept and development 
-            art of the large open-world and claustrophobic dungeons, and the game’s many characters and armors.
-              This translated English art book contains the same content found in the Japanese edition.</p>
-              </div>
-        </div>
-        
-        {/* <div className="p-4 p-md-4 text-white rounded bg-dark borderHome" >
-              <h1 className="flex">
-              Buy More
-              </h1>
-              <img src={cart1} className='imgOrc' alt='img1'/>
-              <p className="lead my-3">
-              Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-              </p>
-            </div>
-            
-            <div className="p-4 p-md-4 text-white rounded bg-success borderHome">
-              <h1 className="flex">
-              Updates
-              </h1>
-              <img src={cart1} className='imgOrc' alt='img1'/>
-              <p className="lead my-3">
-              Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-              </p>
-            </div>
+  useEffect(() => {
+    // Ambil data kontenBook dari db.json
+    const fetchBooks = () => {
+      const bookData = require('../../db.json'); // Mengambil data dari db.json
+      setBooks(bookData.kontenBook); // Simpan data ke state
+    };
 
-           <div className="p-4 p-md-4 text-white rounded bg-secondary borderHome">
-              <h1 className="flex">
-              History
-              </h1>
-              <img src={cart1} className='imgOrc' alt='img1'/>
-              <p className="lead my-3">
-              Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-              </p>
-            </div> */}
-        </section>
-    );
-  }
+    fetchBooks();
+  }, []);
+
+  const getBookImage = (id) => {
+    switch (id) {
+      case "1":
+        return book1; // Mengembalikan book1 untuk kontenBook id 1
+      case "2":
+        return book2; // Mengembalikan book2 untuk kontenBook id 2
+      case "3":
+        return book3; 
+      default:
+        return null; // Jika tidak ada gambar, kembalikan null
+    }
+  };
+
+  return (
+    <section>
+      <Helmet>
+        <title>Home Page</title>
+      </Helmet>
+
+      <div className='w3-row-padding w3-center' id="food">
+        {books.map((book) => ( // Looping untuk menampilkan setiap buku
+          <div key={book.id} className='w3-quarter'>
+            <img className='imgBook1' src={getBookImage(book.id)} alt={`Cover of ${book.judul}`} /> {/* Menampilkan gambar sesuai id */}
+            <h1 className='flex'>
+              {book.judul.length > 34  
+                ? book.judul.slice(0, 34) + '...'
+                : book.judul}
+            </h1>
+            <p className='textTest'>
+              {book.judul.length > 34  
+                ? book.konten.length > 120  
+                  ? book.konten.slice(0, 120) + '...' 
+                  : book.konten 
+                : book.konten.length > 184 
+                  ? book.konten.slice(0, 184) + '...' 
+                  : book.konten} 
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
