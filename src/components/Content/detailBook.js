@@ -2,8 +2,16 @@ import { Helmet } from 'react-helmet';
 import { useEffect, useState } from "react";
 import ReactiveButton from 'reactive-button';
 import './Content.css';
-import './bootstrap.min.css'; 
+import './bootstrap.min.css';
+
 import book1 from '../bg/book1.jpg'; 
+import book2 from '../bg/book2.jpg'; 
+import book3 from '../bg/book3.jpg'; 
+import book4 from '../bg/book4.jpg'; 
+import book5 from '../bg/book5.jpg'; 
+import book6 from '../bg/book6.jpg'; 
+import book7 from '../bg/book7.jpg'; 
+import book8 from '../bg/book8.jpg';
 
 export default function DetailBook() { 
     const [reactButton, setButton] = useState('idle'); // Set initial button state to 'idle'
@@ -12,6 +20,7 @@ export default function DetailBook() {
     const [firstName, setFirstName] = useState('');
     
     const [currentBook, setCurrentBook] = useState({
+        id: "",
         judul: "",
         konten: "",
         detail: "",
@@ -20,20 +29,48 @@ export default function DetailBook() {
 
     useEffect(() => {
         const fetchBooks = () => {
-            const bookData = require('../../db.json'); // fetch data buku
-            setBooks(bookData.kontenBook); 
-            const foundBook = bookData.kontenBook.find(b => b.id === "1"); // Change "1" with the appropriate ID
-            setCurrentBook(foundBook);
-
+            
+            const bookData = require('../../db.json'); // Ambil data buku dari db.json
+            const storedBookId = localStorage.getItem('bookId'); // Ambil bookId dari localStorage
             const storedFirstName = localStorage.getItem('firstName');
             if (storedFirstName) {
                 setFirstName(storedFirstName);
             }
+            if (storedBookId) {
+                // Cari buku yang sesuai dengan id yang disimpan di localStorage
+                const foundBook = bookData.kontenBook.find(b => b.id === storedBookId);
+                if (foundBook) {
+                    setCurrentBook(foundBook); // Set currentBook dengan data buku yang ditemukan
+                }
+            }
         };
-  
+
         fetchBooks();
     }, []);
-      
+
+    // Fungsi untuk memilih gambar berdasarkan idBook
+    const getBookImage = (idBook) => {
+        switch (idBook) {
+            case "1":
+                return book1;
+            case "2":
+                return book2;
+            case "3":
+                return book3;
+            case "4":
+                return book4;
+            case "5":
+                return book5;
+            case "6":
+                return book6;
+            case "7":
+                return book7;
+            case "8":
+                return book8;
+            default:
+                return book1; // Gambar default jika tidak ditemukan
+        }
+    };
     const addToCart = (event) => {
         event.preventDefault();
         // Add the current book to the cart data
@@ -43,7 +80,7 @@ export default function DetailBook() {
     const onClickHandler = () => {
         setButton('loading'); // Set button state to loading
         setTimeout(() => {
-            setButton('success'); // Change button state to success after 2 seconds
+            setButton('success'); // Ubah state button jadi success setelah loading selesai
         }, 1000);
     };
 
@@ -67,7 +104,7 @@ export default function DetailBook() {
                         <div className="row">
                             <div className="col-md-6"> 
                                 <div className="news_img">
-                                    <img src={book1} alt="News" />
+                                    <img src={getBookImage(currentBook.id)} alt="Book Cover" /> {/* Gambar berdasarkan idBook */}
                                 </div>
                                 <div className='empty'></div>
                             </div>
@@ -94,7 +131,7 @@ export default function DetailBook() {
                                         <a href="#" onClick={addToCart}>Add To Cart</a>
                                     </div><br/>
                                 </div>
-                                <p className='totalPrice'>Total Price: ${totalPrice} for {data.length} items</p>
+                               <p className='totalPrice'>Total Price: ${totalPrice} for {data.length} items</p>
                             </div>
                             <div className="empty"></div>
                         </div>

@@ -8,6 +8,7 @@ import AppRouter from './components/router/route';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from "react";
 import Header from './components/headerFooter/header'; 
+import { CartProvider } from './cartContext';
 import Footer from './components/headerFooter/footer';
 import { useLocation } from 'react-router-dom'; // Import useLocation
 
@@ -21,6 +22,7 @@ function App() {
         <>
             <Header />
             <AppRouter />
+            
             {/* {!isBookDetail && <Footer />}  */}
             {/* Tampilkan footer jika bukan di BookDetail */}
         </>

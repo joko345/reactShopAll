@@ -6,6 +6,7 @@
     const [firstName, setFirstName] = useState('');
     const [showDropdown, setShowDropdown] = useState(false); // Untuk menampilkan dropdown
     const navigate = useNavigate(); // Menggunakan useNavigate untuk navigasi
+    const [data, setData] = useState([]);
 
     useEffect(() => {
       // Ambil nilai firstName dari localStorage saat komponen dimuat
@@ -32,6 +33,8 @@
       }
     };
 
+    
+
     const toggleDropdown = () => {
       setShowDropdown(!showDropdown); // Toggle untuk menampilkan atau menyembunyikan dropdown
     };
@@ -51,7 +54,9 @@
           </div>
           <nav className="nav">
             <Link to="/">Home</Link>
-            <Link to="/about-us">About Us</Link>
+      
+            <Link to="/about-us">Cart <span class="badge badge-primary badge-pill">{data.length}</span></Link>     
+            {/* <Link to="/about-us">About Us</Link> */}
             <Link to="/daftar">Register</Link>
 
             <div className="dropdown" style={{ display: 'inline-block' }}>
