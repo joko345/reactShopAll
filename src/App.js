@@ -5,29 +5,26 @@ import AboutUs from './components/Content/aboutUs';
 import Login from './loginRegister/login';
 import Register from './loginRegister/daftar';
 import AppRouter from './components/router/route';
-import bg from './components/bg/bg.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from "react";
-import { Routes, Route, Outlet } from "react-router-dom"; 
-import Header from './components/headerFooter/header'; // Import Header
+import Header from './components/headerFooter/header'; 
+import Footer from './components/headerFooter/footer';
+import { useLocation } from 'react-router-dom'; // Import useLocation
 
 function App() {
-  useEffect(() => {}, []);
+    useEffect(() => {}, []);
+    
+    const location = useLocation(); // Mendapatkan lokasi saat ini
+    const isBookDetail = location.pathname === '/bookrinci'; // Periksa apakah saat ini di BookDetail
 
-  return (
-<>
-      {/* <div style={{ 
-        backgroundImage: `url(/bg.jpg)`, // Tidak perlu menggunakan jalur relatif di folder public
-        backgroundSize: 'cover',         // Pastikan gambar memenuhi area
-        backgroundAttachment: 'fixed',   // Agar gambar tetap saat di-scroll
-        minHeight: '100vh',              // Pastikan gambar menutupi seluruh halaman
-      }}> */}
-        {/* Konten Anda */}
-        <Header />
-        <AppRouter />
-      {/* </div> */}
-    </>
-  );
+    return (
+        <>
+            <Header />
+            <AppRouter />
+            {/* {!isBookDetail && <Footer />}  */}
+            {/* Tampilkan footer jika bukan di BookDetail */}
+        </>
+    );
 }
 
 export default App;

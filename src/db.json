@@ -7,7 +7,9 @@
       "lastName": "Jonah",
       "konten": "new 1",
       "nick": "Fra23",
-      "pass": "123456"
+      "pass": "123456",
+      "favoriteId": ""
+      
     },
     {
       "id": "2",
@@ -15,7 +17,8 @@
       "lastName": "Chaplin",
       "konten": "new 2",
       "nick": "Maria",
-      "pass": "kali123"
+      "pass": "kali123",
+      "favoriteId": ""
     },
     {
       "id": "3",
@@ -23,7 +26,8 @@
       "lastName": "Robson",
       "konten": "new 3",
       "nick": "mantap",
-      "pass": "lohan123"
+      "pass": "lohan123",
+      "favoriteId": ""
     },
     {
       "id": "4",
@@ -31,44 +35,55 @@
       "lastName": "Martian",
       "konten": "new 4",
       "nick": "mati1",
-      "pass": "123456"
+      "pass": "123456",
+      "favoriteId": "[]"
     },
     {
       "id": "5",
       "firstName": "was",
       "konten": "new 5",
       "nick": "was",
-      "pass": "123456"
+      "pass": "123456",
+      "favoriteId": ""
     },
     {
       "id": "6",
       "firstName": "Fan",
       "konten": "new 6",
       "nick": "ss",
-      "pass": "123456"
+      "pass": "123456",
+      "favoriteId": ""
     },
     {
       "id": "7",
       "nick": "",
       "pass": "",
-      "konten": "new 1"
+      "konten": "new 1",
+      "favoriteId": ""
     }
   ],
   "kontenBook": [
     {
       "id": "1",
       "judul": "Elden Ring Artbook",
-      "konten": "The two-volume Elden Ring: Official Art Book contains a plethora of artworks from the game Lands Between’ and its inhabitants in stunning oversized hardcover editions Volume I features key art from the game’s opening movie, concept and development art of the large open-world and claustrophobic dungeons, and the game’s many characters and armors.This translated English art book contains the same content found in the Japanese edition."
+      "harga": "20.10",
+      "favorit": [],
+      "konten": "The two-volume Elden Ring: Official Art Book contains a plethora of artworks from the game Lands Between’ and its inhabitants in stunning oversized hardcover editions Volume I features key art from the game’s opening movie, concept and development art of the large open-world and claustrophobic dungeons, and the game’s many characters and armors.This translated English art book contains the same content found in the Japanese edition.", 
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."
     },
     {
       "id": "2",
       "judul": "Lord of the Rings",
-      "konten": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar. But his contentment is disturbed when the wizard Gandalf and a company of dwarves arrive on his doorstep one day to whisk him away on an adventure. They have launched a plot to raid the treasure hoard guarded by Smaug the Magnificent, a large and very dangerous dragon. Bilbo reluctantly joins their quest, unaware that on his journey to the Lonely Mountain he will encounter both a magic ring and a frightening creature known as Gollum."
+      "favorit": [],
+      "konten": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar. But his contentment is disturbed when the wizard Gandalf and a company of dwarves arrive on his doorstep one day to whisk him away on an adventure. They have launched a plot to raid the treasure hoard guarded by Smaug the Magnificent, a large and very dangerous dragon. Bilbo reluctantly joins their quest, unaware that on his journey to the Lonely Mountain he will encounter both a magic ring and a frightening creature known as Gollum.",
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."    
     },
     {
       "id": "3",
       "judul": "Batman: Nightwalker (DC Icons Series) Hardcover",
-      "konten": "Based on the New York Times bestselling novel by Marie Lu, this graphic novel adaptation brings to life the dark mysteries behind the gates of Arkham Asylum. Nightwalkers are  terrorizing Gotham City, and 18-year-old Bruce Wayne is next on their list. Bruce Wayne is turning 18 and inheriting his family's fortune. But on the way home from his birthday party, he makes an impulsive choice that leads him to Arkham Asylym, the infamous mental hospital. There, he  meets Madeleine Wallace, a brilliant killer . .  .  and Bruce's only hope. Madeline is  the mystery Bruce must unravel, but is he convincing her to divulge her secrets, or is he feeding her the information she needs to bring Gotham City to its knees?"
+      "favorit": [],
+      "konten": "Based on the New York Times bestselling novel by Marie Lu, this graphic novel adaptation brings to life the dark mysteries behind the gates of Arkham Asylum. Nightwalkers are  terrorizing Gotham City, and 18-year-old Bruce Wayne is next on their list. Bruce Wayne is turning 18 and inheriting his family's fortune. But on the way home from his birthday party, he makes an impulsive choice that leads him to Arkham Asylym, the infamous mental hospital. There, he  meets Madeleine Wallace, a brilliant killer . .  .  and Bruce's only hope. Madeline is  the mystery Bruce must unravel, but is he convincing her to divulge her secrets, or is he feeding her the information she needs to bring Gotham City to its knees?",
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { Helmet } from 'react-Helmet'
+import { Helmet } from 'react-helmet'
 
 export default function Contact() {
     return (

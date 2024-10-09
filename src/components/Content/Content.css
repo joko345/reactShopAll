@@ -1,8 +1,13 @@
-legend{
-    font-size: 2rem;
-    font-weight: 600;
+
+.totalPrice{
+    margin-left: 120px;
+    padding-top: 1%;
 }
 
+.reactButton{
+    margin-left: -60px;
+    margin-top: 5px;
+}
 
 main{
     display: flex;
@@ -73,7 +78,151 @@ p {
     margin-top: -22px;
     letter-spacing: -1px;
   }
-  
+
+.footerA{
+    margin-top: 20px;
+}
+
+.news_taital {
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 40px;
+
+    color: #1d1d1d;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.news_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #1b1b1b;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.news_img{
+    border: 2px solid;
+    max-width: 70%;
+    margin-left: 60px;
+}
+
+.news_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 40px;
+}
+
+.give_taital {
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 26px;
+    margin-left: -60px;
+    color: #1d1d1d;
+    font-weight: bold;
+    padding-top: 35px;
+    text-transform: uppercase;
+}
+
+.ipsum_text {
+    width: 100%;
+    float: left;
+    text-align: justify;
+    font-size: 16px;
+    margin-left: -60px;
+    color: #1b1b1b;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.raised_text {
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    color: #120a78;
+    font-weight: bold;
+    margin-left: 55px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 20px;
+    margin-bottom: -5px;
+    
+}
+
+.goal_text {
+    color: #f64646;
+    padding-left: 20px;
+    margin-left: -5px;
+}
+
+.donate_btn_main {
+    width: 35%;
+    display: flex;
+    padding-top: 20px;
+    margin-left: -10px;
+}
+
+.readmore_btn {
+    display: flex;
+    margin: 0 auto;
+ 
+    text-align: center;
+
+}
+
+.readmore_btn a {
+    width: 150px;
+    margin-left: 65px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #120a78;
+    border: 2px solid #ffffff;
+    padding: 8px;
+    text-transform: uppercase;
+
+}
+
+.empty{
+    height: 50px;
+}
+
+.readmore_btn a:hover {
+    color: #ffffff;
+    background-color: #120a78;
+}
+
+.readmore_btn_1 {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.readmore_btn_1 a {
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #f64646;
+    border: 2px solid #ffffff;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+.readmore_btn_1 a:hover {
+    color: #ffffff;
+    background-color: #120a78;
+}
+.layout_padding {
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+
   /* w3 */
 
   /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */

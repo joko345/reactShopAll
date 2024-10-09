@@ -1,42 +1,32 @@
-import { IoLogoPaypal } from "react-icons/io5";
-import { AiFillInstagram } from "react-icons/ai";
-import { IoLogoYoutube } from "react-icons/io5";
+import React from 'react';
+import '../Content/bootstrap.min.css'; // Sesuaikan jalur ke file bootstrap.min.css yang benar
+import '../Content/Content.css'
 
-const dataSosmed = [
-  {
-    id: 1,
-    name: "paypal",
-    icon: <IoLogoPaypal/>,
-    url: 'https://react.dev'
-  },
-  {
-    id: 2,
-    name: "IG",
-    icon: <AiFillInstagram/>,
-    url: 'https://react.dev'
-  },
-  {
-    id: 3,
-    name: "YT",
-    icon: <IoLogoYoutube/>,
-    url: 'https://react.dev'
-
-  },
-]
-
-export default function Footer (){
-    return(
-      <footer>   
-      <ul>
-        
-          {dataSosmed.map(value => (
-            <li key={value.id}>
-              <a href={value.url}>{value.icon}</a>
-              </li>
-          ))}
-        
-      </ul>
-   </footer>
-    )
-  };
-  
+export default function Footer() {
+    return (
+        <footer>
+            <div className="footerA">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-6 col-md-6 col-lg-3">
+                            <h4 className="footer_taital">NAVIGATION</h4>
+                            {/* Tambahkan konten navigation di sini */}
+                        </div>
+                        <div className="col-sm-6 col-md-6 col-lg-3">
+                            <h4 className="footer_taital">NEWS</h4>
+                            {/* Tambahkan konten news di sini */}
+                        </div>
+                        <div className="col-sm-6 col-md-6 col-lg-3">
+                            <h4 className="footer_taital">ADDRESS</h4>
+                            {/* Tambahkan konten address di sini */}
+                        </div>
+                        <div className="col-sm-6 col-md-6 col-lg-3">
+                            <h4 className="footer_taital">CONTACT</h4>
+                            {/* Tambahkan konten contact di sini */}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}

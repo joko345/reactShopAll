@@ -21,13 +21,13 @@ export default function Home() {
   const getBookImage = (id) => {
     switch (id) {
       case "1":
-        return book1; // Mengembalikan book1 untuk kontenBook id 1
+        return book1;
       case "2":
-        return book2; // Mengembalikan book2 untuk kontenBook id 2
+        return book2; 
       case "3":
         return book3; 
       default:
-        return null; // Jika tidak ada gambar, kembalikan null
+        return null; 
     }
   };
 
@@ -42,7 +42,7 @@ export default function Home() {
           <div key={book.id} className='w3-quarter'>
             <img className='imgBook1' src={getBookImage(book.id)} alt={`Cover of ${book.judul}`} /> {/* Menampilkan gambar sesuai id */}
             <h1 className='flex'>
-              {book.judul.length > 34  
+              {book.judul.length > 34  //jika kata lebih dari 34 potong dan ganti "..."
                 ? book.judul.slice(0, 34) + '...'
                 : book.judul}
             </h1>
