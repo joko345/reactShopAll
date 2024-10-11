@@ -1,12 +1,11 @@
-// Other imports remain the same
-import { useEffect, useState, useContext } from "react";
+import { Helmet } from 'react-Helmet';
+import { useEffect, useState } from "react";
 import ReactiveButton from 'reactive-button';
-import { Helmet } from 'react-helmet';
+import { useContext } from 'react';
 import { CartContext } from '../../cartContext';
 import './Content.css';
 import './bootstrap.min.css';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+
 import book1 from '../bg/book1.jpg'; 
 import book2 from '../bg/book2.jpg'; 
 import book3 from '../bg/book3.jpg'; 
@@ -18,10 +17,11 @@ import book8 from '../bg/book8.jpg';
 
 export default function DetailBook() { 
     const { cart, setCart } = useContext(CartContext);
-    const [reactButton, setButton] = useState('idle');
-    const bookId = localStorage.getItem('bookId'); 
+    const [reactButton, setButton] = useState('idle'); // Set initial button state to 'idle'
+    const [books, setBooks] = useState([]); 
     const [data, setData] = useState([]);
     const [firstName, setFirstName] = useState('');
+    
     const [currentBook, setCurrentBook] = useState({
         id: "",
         judul: "",
@@ -30,36 +30,20 @@ export default function DetailBook() {
         harga: 0,
     });
 
-    const navigate = useNavigate();
-
-    const getBookImage = (idBook) => {
-        switch (idBook) {
-            case "1": return book1;
-            case "2": return book2;
-            case "3": return book3;
-            case "4": return book4;
-            case "5": return book5;
-            case "6": return book6;
-            case "7": return book7;
-            case "8": return book8;
-            default: return book1; 
-        }
-    };
-
     useEffect(() => {
         const fetchBooks = () => {
-            const bookData = require('../../db.json');
-            const storedBookId = localStorage.getItem('bookId'); 
+            
+            const bookData = require('../../db.json'); // Ambil data buku dari db.json
+            const storedBookId = localStorage.getItem('bookId'); // Ambil bookId dari localStorage
             const storedFirstName = localStorage.getItem('firstName');
-
             if (storedFirstName) {
                 setFirstName(storedFirstName);
             }
-
             if (storedBookId) {
+                // Cari buku yang sesuai dengan id yang disimpan di localStorage
                 const foundBook = bookData.kontenBook.find(b => b.id === storedBookId);
                 if (foundBook) {
-                    setCurrentBook(foundBook);
+                    setCurrentBook(foundBook); // Set currentBook dengan data buku yang ditemukan
                 }
             }
         };
@@ -67,50 +51,44 @@ export default function DetailBook() {
         fetchBooks();
     }, []);
 
+    // Fungsi untuk memilih gambar berdasarkan idBook
+    const getBookImage = (idBook) => {
+        switch (idBook) {
+            case "1":
+                return book1;
+            case "2":
+                return book2;
+            case "3":
+                return book3;
+            case "4":
+                return book4;
+            case "5":
+                return book5;
+            case "6":
+                return book6;
+            case "7":
+                return book7;
+            case "8":
+                return book8;
+            default:
+                return book1; // Gambar default jika tidak ditemukan
+        }
+    };
     const addToCart = (event) => {
         event.preventDefault();
-        const cartData = JSON.parse(localStorage.getItem('cart')) || []; 
-        const existingBook = cartData.find(b => b.id === currentBook.id);
+        // Add the current book to the cart data
         setData(prevData => [...prevData, currentBook]);
         setCart(prevCart => [...prevCart, currentBook]);
-
-        if (existingBook) {
-            existingBook.countCart += 1; 
-            updateDbJsonCart(existingBook.id, existingBook.countCart); 
-        } else {
-            cartData.push({
-                id: currentBook.id,
-                judul: currentBook.judul,
-                countCart: 1,
-                harga: currentBook.harga
-            });
-            updateDbJsonCart(currentBook.id, 1); 
-        }
-
-        localStorage.setItem('cart', JSON.stringify(cartData)); 
-    };
-
-    const updateDbJsonCart = async (id, count) => {
-        try {
-            const response = await axios.patch(`http://localhost:2002/cartKonten/${id}`, {
-                countCart: count,
-            });
-            console.log('Updated db.json:', response.data);
-        } catch (error) {
-            console.error('Error updating db.json:', error);
-        }
     };
 
     const onClickHandler = () => {
-        setButton('loading');
+        setButton('loading'); // Set button state to loading
         setTimeout(() => {
-            setButton('success');
+            setButton('success'); // Ubah state button jadi success setelah loading selesai
         }, 1000);
     };
 
     const totalPrice = firstName ? (currentBook.harga * 0.8 * data.length).toFixed(2) : (currentBook.harga * data.length).toFixed(2);
-
-    if (!currentBook.id) return <div>Loading...</div>; 
 
     return (
         <>
@@ -130,7 +108,7 @@ export default function DetailBook() {
                         <div className="row">
                             <div className="col-md-6"> 
                                 <div className="news_img">
-                                    <img src={getBookImage(currentBook.id)} alt="Book Cover" />
+                                    <img src={getBookImage(currentBook.id)} alt="Book Cover" /> {/* Gambar berdasarkan idBook */}
                                 </div>
                                 <div className='empty'></div>
                             </div>
@@ -138,7 +116,7 @@ export default function DetailBook() {
                                 <h1 className="give_taital">About Author</h1> 
                                 <ReactiveButton 
                                     color="yellow"
-                                    className='reactButton' 
+                                    className= 'reactButton' 
                                     buttonState={reactButton}
                                     idleText="Favorit"
                                     loadingText="Loading"

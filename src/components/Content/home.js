@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-Helmet';
 import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 

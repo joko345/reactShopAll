@@ -1,4 +1,3 @@
-
 {
   "users": [
     {
@@ -9,7 +8,6 @@
       "nick": "Fra23",
       "pass": "123456",
       "favoriteId": ""
-      
     },
     {
       "id": "2",
@@ -68,8 +66,9 @@
       "judul": "Elden Ring Artbook",
       "harga": "10.10",
       "favorit": [],
-      "konten": "The two-volume Elden Ring: Official Art Book contains a plethora of artworks from the game Lands Between’ and its inhabitants in stunning oversized hardcover editions Volume I features key art from the game’s opening movie, concept and development art of the large open-world and claustrophobic dungeons, and the game’s many characters and armors.This translated English art book contains the same content found in the Japanese edition.", 
-      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."
+      "konten": "The two-volume Elden Ring: Official Art Book contains a plethora of artworks from the game Lands Between’ and its inhabitants in stunning oversized hardcover editions Volume I features key art from the game’s opening movie, concept and development art of the large open-world and claustrophobic dungeons, and the game’s many characters and armors.This translated English art book contains the same content found in the Japanese edition.",
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman.",
+      "countCart": 6
     },
     {
       "id": "2",
@@ -77,7 +76,8 @@
       "harga": "20.10",
       "favorit": [],
       "konten": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar. But his contentment is disturbed when the wizard Gandalf and a company of dwarves arrive on his doorstep one day to whisk him away on an adventure. They have launched a plot to raid the treasure hoard guarded by Smaug the Magnificent, a large and very dangerous dragon. Bilbo reluctantly joins their quest, unaware that on his journey to the Lonely Mountain he will encounter both a magic ring and a frightening creature known as Gollum.",
-      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."    
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman.",
+      "countCart": 15
     },
     {
       "id": "3",
@@ -85,15 +85,17 @@
       "harga": "30.10",
       "favorit": [],
       "konten": "Based on the New York Times bestselling novel by Marie Lu, this graphic novel adaptation brings to life the dark mysteries behind the gates of Arkham Asylum. Nightwalkers are  terrorizing Gotham City, and 18-year-old Bruce Wayne is next on their list. Bruce Wayne is turning 18 and inheriting his family's fortune. But on the way home from his birthday party, he makes an impulsive choice that leads him to Arkham Asylym, the infamous mental hospital. There, he  meets Madeleine Wallace, a brilliant killer . .  .  and Bruce's only hope. Madeline is  the mystery Bruce must unravel, but is he convincing her to divulge her secrets, or is he feeding her the information she needs to bring Gotham City to its knees?",
-      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."
-    },  
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman.",
+      "countCart": 7
+    },
     {
       "id": "4",
       "judul": "Horizon Zero Dawn Artbook",
       "harga": "40.10",
       "favorit": [],
-      "konten": "The two-volume Elden Ring: Official Art Book contains a plethora of artworks from the game Lands Between’ and its inhabitants in stunning oversized hardcover editions Volume I features key art from the game’s opening movie, concept and development art of the large open-world and claustrophobic dungeons, and the game’s many characters and armors.This translated English art book contains the same content found in the Japanese edition.", 
-      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."
+      "konten": "The two-volume Elden Ring: Official Art Book contains a plethora of artworks from the game Lands Between’ and its inhabitants in stunning oversized hardcover editions Volume I features key art from the game’s opening movie, concept and development art of the large open-world and claustrophobic dungeons, and the game’s many characters and armors.This translated English art book contains the same content found in the Japanese edition.",
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman.",
+      "countCart": 7
     },
     {
       "id": "5",
@@ -101,7 +103,8 @@
       "harga": "50.10",
       "favorit": [],
       "konten": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar. But his contentment is disturbed when the wizard Gandalf and a company of dwarves arrive on his doorstep one day to whisk him away on an adventure. They have launched a plot to raid the treasure hoard guarded by Smaug the Magnificent, a large and very dangerous dragon. Bilbo reluctantly joins their quest, unaware that on his journey to the Lonely Mountain he will encounter both a magic ring and a frightening creature known as Gollum.",
-      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."    
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman.",
+      "countCart": 1
     },
     {
       "id": "6",
@@ -109,7 +112,8 @@
       "harga": "60.10",
       "favorit": [],
       "konten": "Based on the New York Times bestselling novel by Marie Lu, this graphic novel adaptation brings to life the dark mysteries behind the gates of Arkham Asylum. Nightwalkers are  terrorizing Gotham City, and 18-year-old Bruce Wayne is next on their list. Bruce Wayne is turning 18 and inheriting his family's fortune. But on the way home from his birthday party, he makes an impulsive choice that leads him to Arkham Asylym, the infamous mental hospital. There, he  meets Madeleine Wallace, a brilliant killer . .  .  and Bruce's only hope. Madeline is  the mystery Bruce must unravel, but is he convincing her to divulge her secrets, or is he feeding her the information she needs to bring Gotham City to its knees?",
-      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman.",
+      "countCart": 1
     },
     {
       "id": "7",
@@ -117,7 +121,8 @@
       "harga": "70.10",
       "favorit": [],
       "konten": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar. But his contentment is disturbed when the wizard Gandalf and a company of dwarves arrive on his doorstep one day to whisk him away on an adventure. They have launched a plot to raid the treasure hoard guarded by Smaug the Magnificent, a large and very dangerous dragon. Bilbo reluctantly joins their quest, unaware that on his journey to the Lonely Mountain he will encounter both a magic ring and a frightening creature known as Gollum.",
-      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."    
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman.",
+      "countCart": 1
     },
     {
       "id": "8",
@@ -125,7 +130,58 @@
       "harga": "80.10",
       "favorit": [],
       "konten": "Based on the New York Times bestselling novel by Marie Lu, this graphic novel adaptation brings to life the dark mysteries behind the gates of Arkham Asylum. Nightwalkers are  terrorizing Gotham City, and 18-year-old Bruce Wayne is next on their list. Bruce Wayne is turning 18 and inheriting his family's fortune. But on the way home from his birthday party, he makes an impulsive choice that leads him to Arkham Asylym, the infamous mental hospital. There, he  meets Madeleine Wallace, a brilliant killer . .  .  and Bruce's only hope. Madeline is  the mystery Bruce must unravel, but is he convincing her to divulge her secrets, or is he feeding her the information she needs to bring Gotham City to its knees?",
-      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman."
+      "detail": "Topsy-turvy madness on the backwards Bizarro planet. A bottled city that proves you can never go home again. A living sun hell-bent on destroying humanity. A world without the Man of Steel. Twelve impossible labors and mere moments to save the Earth the multiple-award winning ALL-STAR SUPERMAN is an eternal story true to the greatest character from the golden age of comics. Witness the timeless icon—the Man of Steel—in action in this deluxe collection of excitement and acclaim Featuring all the classic characters Lex Luthor, Jimmy Olsen, Lois Lane, and Bizarro, this deluxe edition collects All-Star Superman #1-12 and Absolute All-Star Superman.",
+      "countCart": 1
+    }
+  ],
+  "cartKonten": [
+    {
+      "id": "1",
+      "judul": "Elden Ring Artbook",
+      "harga": "30.10",
+      "countCart": "0"
+    },
+    {
+      "id": "2",
+      "judul": "Lord of the Rings",
+      "harga": "30.10",
+      "countCart": "0"
+    },
+    {
+      "id": "3",
+      "judul": "Batman: Nightwalker (DC Icons Series) Hardcover",
+      "harga": "30.10",
+      "countCart": "0"
+    },
+    {
+      "id": "4",
+      "judul": "Horizon Zero Dawn Artbook",
+      "harga": "40.10",
+      "countCart": 8
+    },
+    {
+      "id": "5",
+      "judul": "Total War Warhammer Artbook",
+      "harga": "50.10",
+      "countCart": "0"
+    },
+    {
+      "id": "6",
+      "judul": "Overwatch Artbook Volume 2",
+      "harga": "60.10",
+      "countCart": "0"
+    },
+    {
+      "id": "7",
+      "judul": "Deus Ex Universe",
+      "harga": "70.10",
+      "countCart": 6
+    },
+    {
+      "id": "8",
+      "judul": "Halo Artbook",
+      "harga": "80.10",
+      "countCart": 2
     }
   ]
 }

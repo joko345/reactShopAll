@@ -1,89 +1,105 @@
-  import { Link, useNavigate } from "react-router-dom";
-  import { useEffect, useState } from "react";
-  import 'bootstrap/dist/css/bootstrap.min.css'; // Pastikan Bootstrap terpasang
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState, useContext } from "react";
+import { CartContext } from '../../cartContext';
+import axios from 'axios'; // pastikan axios terpasang
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-  export default function Header() {
+export default function Header() {
+    const { cart } = useContext(CartContext);
     const [firstName, setFirstName] = useState('');
-    const [showDropdown, setShowDropdown] = useState(false); // Untuk menampilkan dropdown
-    const navigate = useNavigate(); // Menggunakan useNavigate untuk navigasi
-    const [data, setData] = useState([]);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const navigate = useNavigate();
+    const [cartLength, setCartLength] = useState(0);
 
-    useEffect(() => {
-      // Ambil nilai firstName dari localStorage saat komponen dimuat
-      const storedFirstName = localStorage.getItem('firstName');
-      if (storedFirstName) {
-        setFirstName(storedFirstName);
-      }
-    }, []);
+    // Fungsi untuk menangani penambahan item ke cart berdasarkan id
+    const handleCart = async (id) => {
+        try {
+            const response = await axios.get('http://localhost:2002/cartKonten'); // ambil cart dari API
+            const cartDb = response.data;
 
-    const handleSelect = (action) => {
-      if (action === "profile") {
-        if (firstName) {
-          navigate('/profile'); // Jika sudah login, arahkan ke halaman Profile
-        } else {
-          navigate('/login'); // Jika belum login, arahkan ke halaman Login
+            const foundCart = cartDb.find(item => item.id === id); // cari item berdasarkan id
+
+            if (foundCart) {
+                const updatedCart = {
+                    ...foundCart,
+                    countCart: (parseInt(foundCart.countCart) || 0) + 1 // tambahkan jumlah item
+                };
+
+                // Update jumlah item di cart berdasarkan id
+                await axios.put(`http://localhost:2002/cartKonten/${id}`, updatedCart);
+            }
+        } catch (error) {
+            console.error('Error updating cart:', error);
         }
-      } else if (action === "favorites") {
-        navigate('/favorites'); // Arahkan ke halaman Favorites
-      } else if (action === "logout") {
-        // Proses logout
-        localStorage.removeItem('firstName'); // Hapus informasi login
-        setFirstName(''); // Reset state
-        navigate('/login'); // Arahkan ke halaman Login setelah logout
-      }
     };
 
-    
+    const handleLogout = () => {
+        localStorage.removeItem('firstName'); // Remove firstName from localStorage
+        setFirstName(''); // Clear firstName from state
+        navigate('/'); // Redirect to the home page or login page
+    };
 
+    useEffect(() => {
+        // Ambil nilai firstName dari localStorage saat komponen dimuat
+        const storedFirstName = localStorage.getItem('firstName');
+        if (storedFirstName) {
+            setFirstName(storedFirstName);
+        }
+
+        // Update cart length based on local storage
+        const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+        const totalCount = cartData.reduce((total, item) => total + item.countCart, 0);
+        setCartLength(totalCount);
+    }, []);
+    
     const toggleDropdown = () => {
-      setShowDropdown(!showDropdown); // Toggle untuk menampilkan atau menyembunyikan dropdown
+        setShowDropdown(!showDropdown);
     };
 
     return (
-      <>
-        <header className="header pala">
-          <div className="logo">
-            <img
-              src="https://images.pexels.com/users/avatars/116286/buenosia-carol-263.jpeg?auto=compress&fit=crop&h=130&w=130&dpr=1"
-              alt="cats coming"
-              className="img1"
-            />
-            <span className="nav">Welcome </span>
-            <span className="nav">{firstName ? firstName : 'Guest'}
-            </span>
-          </div>
-          <nav className="nav">
-            <Link to="/">Home</Link>
-      
-            <Link to="/about-us">Cart <span class="badge badge-primary badge-pill">{data.length}</span></Link>     
-            {/* <Link to="/about-us">About Us</Link> */}
-            <Link to="/daftar">Register</Link>
+        <>
+            <header className="header pala">
+                <div className="logo">
+                    <img
+                        src="https://images.pexels.com/users/avatars/116286/buenosia-carol-263.jpeg?auto=compress&fit=crop&h=130&w=130&dpr=1"
+                        alt="cats coming"
+                        className="img1"
+                    />
+                    <span className="nav">Welcome </span>
+                    <span className="nav">{firstName ? firstName : 'Guest'}</span>
+                </div>
+                <nav className="nav">
+                    <Link to="/">Home</Link>
+                    <Link to="/cart">
+                        Cart <span className="badge badge-primary badge-pill">{cart.length}</span>
+                    </Link>
+                    <Link to="/daftar">Register</Link>
 
-            <div className="dropdown" style={{ display: 'inline-block' }}>
-              <button
-                className="btn btn-dark btn-sm dropdown-toggle "
-                onClick={toggleDropdown}
-                aria-expanded={showDropdown}
-              >
-                {firstName ? 'Account' : 'Login'}
-              </button>
+                    <div className="dropdown" style={{ display: 'inline-block' }}>
+                        <button
+                            className="btn btn-dark btn-sm dropdown-toggle"
+                            onClick={toggleDropdown}
+                            aria-expanded={showDropdown}
+                        >
+                            {firstName ? 'Account' : 'Login'}
+                        </button>
 
-              {showDropdown && (
-                <ul className="dropdown-menu show" style={{ display: 'block' }}>
-                  {firstName ? (
-                    <>
-                      <li className="dropdown-item btn btn-secondary btn-sm" onClick={() => handleSelect('profile')}>Profile</li>
-                      <li className="dropdown-item btn btn-secondary btn-sm" onClick={() => handleSelect('favorites')}>Favorites</li>
-                      <li className="dropdown-item btn btn-secondary btn-sm" onClick={() => handleSelect('logout')}>Logout</li>
-                    </>
-                  ) : (
-                    <li className="dropdown-item" onClick={() => navigate('/login')}>Login</li>
-                  )}
-                </ul>
-              )}
-            </div>
-          </nav>
-        </header>
-      </>
+                        {showDropdown && (
+                            <ul className="dropdown-menu show" style={{ display: 'block' }}>
+                                {firstName ? (
+                                    <>
+                                        <li className="dropdown-item btn btn-secondary btn-sm" onClick={() => navigate('/profile')}>Profile</li>
+                                        <li className="dropdown-item btn btn-secondary btn-sm" onClick={() => navigate('/favorites')}>Favorites</li>
+                                        <li className="dropdown-item btn btn-secondary btn-sm" onClick={handleLogout}>Logout</li>
+                                    </>
+                                ) : (
+                                    <li className="dropdown-item" onClick={() => navigate('/login')}>Login</li>
+                                )}
+                            </ul>
+                        )}
+                    </div>
+                </nav>
+            </header>
+        </>
     );
-  }
+}
