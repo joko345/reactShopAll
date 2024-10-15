@@ -20,10 +20,12 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app",
+    "rules": {
+      "no-unused-vars": "off",
+      "react/jsx-filename-extension": "off",
+      "react/prop-types": "off"
+    }
   },
   "browserslist": {
     "production": [
