@@ -138,50 +138,50 @@
     {
       "id": "1",
       "judul": "Elden Ring Artbook",
-      "harga": "30.10",
-      "countCart": "0"
+      "harga": "10.10",
+      "countCart": 1
     },
     {
       "id": "2",
       "judul": "Lord of the Rings",
-      "harga": "30.10",
-      "countCart": "0"
+      "harga": "20.10",
+      "countCart": 0
     },
     {
       "id": "3",
       "judul": "Batman: Nightwalker (DC Icons Series) Hardcover",
       "harga": "30.10",
-      "countCart": "0"
+      "countCart": 0
     },
     {
       "id": "4",
       "judul": "Horizon Zero Dawn Artbook",
       "harga": "40.10",
-      "countCart": 8
+      "countCart": 0
     },
     {
       "id": "5",
       "judul": "Total War Warhammer Artbook",
       "harga": "50.10",
-      "countCart": "0"
+      "countCart": 0
     },
     {
       "id": "6",
       "judul": "Overwatch Artbook Volume 2",
       "harga": "60.10",
-      "countCart": "0"
+      "countCart": 0
     },
     {
       "id": "7",
       "judul": "Deus Ex Universe",
       "harga": "70.10",
-      "countCart": 6
+      "countCart": 0
     },
     {
       "id": "8",
       "judul": "Halo Artbook",
       "harga": "80.10",
-      "countCart": 2
+      "countCart": 0
     }
   ]
 }

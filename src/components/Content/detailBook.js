@@ -1,7 +1,7 @@
 // Other imports remain the same
 import { useEffect, useState, useContext } from "react";
 import ReactiveButton from 'reactive-button';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-Helmet';
 import { CartContext } from '../../cartContext';
 import './Content.css';
 import './bootstrap.min.css';
@@ -17,7 +17,7 @@ import book7 from '../bg/book7.jpg';
 import book8 from '../bg/book8.jpg';
 
 export default function DetailBook() { 
-    const { cart, setCart } = useContext(CartContext);
+    const { cart, setCart } = useContext(CartContext);//untuk menerima data cart
     const [reactButton, setButton] = useState('idle');
     const bookId = localStorage.getItem('bookId'); 
     const [data, setData] = useState([]);
@@ -69,8 +69,8 @@ export default function DetailBook() {
 
     const addToCart = (event) => {
         event.preventDefault();
-        const cartData = JSON.parse(localStorage.getItem('cart')) || []; 
-        const existingBook = cartData.find(b => b.id === currentBook.id);
+        const cartData = JSON.parse(localStorage.getItem('cart')) || []; //mengecek jumlah item cart
+        const existingBook = cartData.find(b => b.id === currentBook.id);//mencari id card berdasarkan id book
         setData(prevData => [...prevData, currentBook]);
         setCart(prevCart => [...prevCart, currentBook]);
 
@@ -78,7 +78,7 @@ export default function DetailBook() {
             existingBook.countCart += 1; 
             updateDbJsonCart(existingBook.id, existingBook.countCart); 
         } else {
-            cartData.push({
+            cartData.push({//push data cart baru 
                 id: currentBook.id,
                 judul: currentBook.judul,
                 countCart: 1,
