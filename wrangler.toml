@@ -1,0 +1,10 @@
+name = "your-project-name"
+type = "webpack"
+
+account_id = "your-account-id"
+workers_dev = true
+compatibility_date = "2024-10-15"
+
+[[site]]
+bucket = "./build" # Path ke folder build Anda
+entry-point = "workers-site"
