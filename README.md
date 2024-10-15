@@ -6,12 +6,8 @@ LINK CLOUDFLARE = https://fcdf85e9.landing-page-reactjs.pages.dev/
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> //mempersingkat penulisan kode dengan jsx
     npm install bootstrap   
 
-    reacthook menggunakan context api, dapat mengiirim value antar component secara realtime
-    json-server --watch db.json --port 2002
+
     saran dependecies form= react hook form, formix, react final form
     saran async.await = react query tanstack. swr vercel app
     api github= https://api.github.com/users/joko345
     ss
-
-    react router untuk ganti page
-    react helmet untuk mengganti title page
