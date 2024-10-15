@@ -67,8 +67,8 @@ export default function Cart() {
         if (currentBook) {
             try {
                 await axios.put(`http://localhost:2002/cartKonten/${itemId}`, {
-                    ...currentBook,
-                    countCart: newCount,
+                    ...currentBook,//menyalin semua data dalam konten ke objk baru yng bisa dibaca sistem
+                    countCart: newCount, //menambah countcart dengan newcount yang akan diinput
                 });
             } catch (error) {
                 console.error('Error updating cart on server:', error);
