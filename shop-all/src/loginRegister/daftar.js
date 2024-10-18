@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../index.css";
 import axios from "axios";
+/* eslint-disable no-unused-vars */
 
 function App() {
   const [user, setUser] = useState({
