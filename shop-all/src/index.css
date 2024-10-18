@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  /* background-image: linear-gradient(150deg, red, yellow); */
+  /* background-image: url("https://images.pexels.com/photos/5501143/pexels-photo-5501143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+  background-size: cover; /* Mengatur gambar latar belakang memenuhi area */
+  background-attachment: fixed; /* Gambar tetap saat scroll */
+  padding-top: 80px;
+}
+/* 
+.bg-login{
+  background-image: url("https://images.pexels.com/photos/5501143/pexels-photo-5501143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+} */
+
+
+.page404{
+  font-weight: bold;
+  text-align: center;
+}
+
+.formBody{
+  text-align: center;
+}
+
+form{
+  padding: 10px;
+}
+  
+.pala{
+  background-color: black !important;
+}
+
+header{
+  position: fixed; /* Buat posisi header tetap */
+  top: 0; /* Pastikan berada di bagian paling atas */
+  width: 100%; /* Buat lebar penuh */
+  z-index: 1000; /* Atur z-index lebih tinggi agar di atas konten lain */
+  padding: 10px;
+  text-align: center;
+  }
+
+header li span{
+  font-weight: bold;
+}
+
+.yellowText{
+  color: #ECB740;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+header img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    top: 200px;
+  }
+.img1{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  float: left;
+  top: 0px;
+}
+h1{
+  text-align: center;
+  
+}
+
+.homep{
+  text-align: center;
+  position: absolute;
+  left: 500px;
+}
+
+ul {
+  padding: 0; 
+
+  margin: 0;  
+}
+
+ul li {
+  text-align: center;
+  display: block;
+}
+
+ul.menu li a {
+  text-decoration: none; /* Menghilangkan garis bawah */
+  color: #000; /* Atur warna teks, jika diperlukan */
+  border: 1px solid black;
+  display: block;
+  padding: 10px 0;
+  margin: 10px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+ul.menu li a:hover {
+  text-decoration: underline; /* Tampilkan garis bawah saat hover */
+  color: #555; /* Ubah warna saat hover (opsional) */
+}
+
+footer ul{
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+}
+
+footer ul a{
+  font-size: 20px;
+}
+
+.my-shopping-list {
+  padding: 0;
+  margin: 0;
+}
+
+.my-shopping-list li {
+  background: #fef6e2;
+  display: flex; /* Menggunakan Flexbox */
+  align-items: center;
+  justify-content: space-between; /* Jarak antar elemen */
+  padding: 10px; /* Memberikan ruang antar item */
+  border-bottom: 1px solid #ddd; /* Garis pemisah antar item */
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.my-shopping-list li button {
+  margin-left: auto;
+  background-color: #ECB740; /* Warna tombol */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.my-shopping-list li button:hover {
+  background-color: #ff4a4a;
+  cursor: pointer;
+}
+
+.borderHome{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* optional */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.img1 {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.judulbook{
+  position: relative;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 10px;
+  }
+
+.nav {
+  color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav a {
+  margin-right: 20px;
+}
